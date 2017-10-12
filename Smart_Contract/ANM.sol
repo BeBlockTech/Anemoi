@@ -68,6 +68,7 @@ contract Anemoi is owned {
 		Transfer(_from, _to, _value);
 	}
 
+	//Create new tokens
 	function mintToken(address targget, uint256 mintedAmount) onlyOwner {
 		balanceOf[target] += mintedAmount;
 		totalSupply += mintedAmount;
@@ -75,6 +76,7 @@ contract Anemoi is owned {
 		Transfer(owner, target, mintedAmount);
 	}
 
+	// Frreze accounts
 	mapping (address => bool) public frozenAccount;
 	event FrozenFunds(address target, bool frozen)
 
@@ -90,13 +92,32 @@ contract Anemoi is owned {
 
 	// Automatic selling and buying
 	    uint256 public sellPrice;
-    uint256 public buyPrice;
+	    uint256 public buyPrice;
 
-    function setPrices(uint256 newSellPrice, uint256 newBuyPrice) onlyOwner {
+	    function setPrices(uint256 newSellPrice, uint256 newBuyPrice) onlyOwner {
         sellPrice = newSellPrice;
         buyPrice = newBuyPrice;
     }
 
+    function buy() payable returns (uint amount) {
+    	amount = msg.value / buyPrice;                  // calcullates the amount 
+    	require(balanceOf[this] >= amount);             // checks is it has enough to sell
+    	balanceOf[msg.sender] += amount;                // adds the amount to buyer's balance
+    	balanceOf[this] -= amount;                      // substracts the amount from sellers balance
+    	Transfer(this, msg.sender, amount);             // execute an event reflecting the change
+    	return amount;
+    
+    }
+
+    function sell(uint amount) returns (uint revenue) {
+    	require(balanceOf[msg.sender] >= amount);       // cheks if the sender has enough to sell
+    	balanceOf[this] += amount;                      // adds the amount to owner's balance 
+    	balanceOf[msg.sender] -= amount;                // substracts the amount from the seller's balance 
+    	revenue = amount * sellPrice;                   
+    	require(msg.sender.send(revenue));              // sends ether to the seller: it's important to do this last to prevent attacks
+    	Transfer(msg.sender, this, amount);             // executes an event reflecting on thhe change
+    	return revenue;                                 // ends the function
+    }
 }
 
 
