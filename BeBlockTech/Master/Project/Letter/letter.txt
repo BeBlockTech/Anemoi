@@ -1,0 +1,13 @@
+-Name organisation = BeBlockTech
+-Link: We are not online yet, it's for our seed investors
+-Funding: The first investment is needed to build the first physical cryptocurrency exchange based in Brussels and also for the launch of the ICO.
+-Our goal: see attachment
+-It's for crowdfunding purposes but what I need from you is a letter to send to potential partners
+-About me: That's where you come in, I really can't speak about me, please help!!
+
+
+This is what I have written so far;
+
+We want to bring new customers to the Blockchain Community and offer a service that is different, or more convenient than everything that exists. The complex crypto space makes it difficult for beginners to start trading. Current platforms impose high barriers to entry because they often lack usability, transparency, and knowledge. As a result, many people are discouraged to adopt the crypto economy. We are building the first physical Belgian crypto-exchange like our neighbors in Paris. Unlike Paris, the exchange will combine the buy and sell of cryptocurrencies with education around blockchain technologies, dapps, smart-contracts and so on by means of educational meetups. We are also discussing a potential partnership with Belgium-Ladbrokes (gambling bureaus) where they have more than 900 available locations all over Belgium already in use and where we could make use of their branding and implement Funfair or Decent-Bet on top of it. http://belgium-ladbrokes.be. We are also building a trading platform with the ability to cash out. We are also creating a cryptocurrency-fonds which will serve as a “proof of ownership”, open to the public and which will represent the assets held by our company. We are not trying to reinvent the wheel, instead, we are making use of existing blockchains and implementing them into one country. This is a project where we would make use of existing markets and applications to clone them into one project, one where we could introduce everyday people and existing businesses to Blockchain technologies and the benefits of it, one that could serve as a protocol and as an example of how blockchain technologies could change our everyday lives. 
+
+There is this gap in the market where non-tech people don’t know where to physically go to educate themselves around blockchain technologies in other languages than English, most people don’t know where to go to buy, and especially, to sell their crypto assets, our company aims to fill that gap not only in Belgium, but also in other countries like Spain (Eivissa) and later on in the Dominican Republic
