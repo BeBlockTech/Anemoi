@@ -43,7 +43,7 @@ contract AnemoiPresale is SafeMath{
     }
 
     // @dev constructor
-    function IndorsePreSale() {
+    function Anemoi() {
       isFinalized = false;                                      //controls pre through crowdsale state
       owner = msg.sender;
       totalSupply = 0;
